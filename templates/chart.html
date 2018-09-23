@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="static/css/extra.css">
+  <style>
+  body{
+  background: linear-gradient(230deg, #ff5050, #ffc88f, #cc3300);
+  }
+.container {
+  text-align: center;
+  padding: 5em 0;
+  margin-top: 2em;
+  margin-bottom: 2em;
+
+  background-size: 300% 300%;
+  animation: css-gradient 20s ease infinite;
+  border = 5px;
+}
+.graph {
+  float = left;
+  width: 300px;
+    height: 300px;
+
+    float: left;
+    margin: 5px;
+}
+.textA {
+  float = left;
+  width: 500px;
+    height: 300px;
+    float: left;
+    margin: 5px;
+}
+.donate-container {
+  float = middle;
+  display: inline-block;
+  width: 1130px;
+    height: 500px;
+    margin: 5px;
+}
+.qr {
+background-image: url(href="static/assets/static/img/qrcode.png");
+  width: 300px;
+    height: 300px;
+
+    float: left;
+    margin: 5px;
+}
+p  {
+    color: black;
+    font-family: Arial;
+    font-size: 10pt;
+    text-align: center;
+    font-weight: lighter;
+}
+p2  {
+    color: black;
+    font-family: Arial;
+    font-size: 30pt;
+    text-align: center;
+    font-weight: bold;
+}
+</style>
+ <title>Chart.js
+ </title>      <!-- import plugin script -->
+  <script src='static/assets/js/Chart.min.js'></script>
+</head><body>
+
+
+
+
+<div class="container">
+
+  <div class="donate-container">
+    <h1>YOUR CONTRIBUTIONS</h1><!-- bar chart canvas element -->
+    <div class = "graph">
+      <canvas id="chart" width="300" height="300"></canvas>
+      <script>
+   // bar chart data
+        var pieData = [
+               {% for item,label,colors in set %}
+                   {
+                       value: {{item}},
+                       label: "{{label}}",
+                       color : "{{colors}}"
+                   },
+                   {% endfor %}
+
+
+            ];
+
+      // get bar chart canvas
+        var mychart = document.getElementById("chart").getContext("2d");
+
+        steps = 10
+        max = 10
+      // draw pie chart
+        new Chart(document.getElementById("chart").getContext("2d")).Doughnut(pieData);
+  //    We love your help!
+
+      </script>
+    </div>
+    <div class = "textA">
+    <p>
+      <br/>With your donation... <br/><br/><p2>TOTAL RAISED: $32,000</p2><br/> <br/><p2>GOAL: $480,000</p2><br/><br/><br/>
+      Find out exactly how your money is being used and find out how you can donate further <br/>
+      by scanning the QR code or by going to www.rescue.ocean.org/donate.
+    </p>
+    </div>
+    <div class = "qr">
+      <img src="/static/assets/static/img/qrcode.png">
+    </div>
+</div>
+</div>
+</body></html>
