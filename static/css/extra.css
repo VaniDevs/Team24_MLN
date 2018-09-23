@@ -1,0 +1,70 @@
+
+#donation-container {
+    padding: 5em 0;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    background: linear-gradient(230deg, #ff5050, #ffc88f, #cc3300);
+    background-size: 300% 300%;
+    animation: css-gradient 20s ease infinite;
+    border = 5px;
+}
+.col-sm-4{
+  float = left;
+  width: 200px;
+    height: 200px;
+    border: 1px solid green;
+    float: left;
+    margin: 5px;
+}
+h1 {
+    color: blue;
+    font-family: verdana;
+    font-size: 300%;
+}
+.container {
+  padding: 5em 0;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  background: linear-gradient(230deg, #ff5050, #ffc88f, #cc3300);
+  background-size: 300% 300%;
+  animation: css-gradient 20s ease infinite;
+  border = 5px;
+}
+.graph {
+  float = left;
+  width: 300px;
+    height: 300px;
+    border: 1px solid green;
+    float: left;
+    margin: 5px;
+}
+.textA {
+  float = left;
+  width: 500px;
+    height: 300px;
+    border: 1px solid green;
+    float: left;
+    margin: 5px;
+}
+.qr {
+background-image: url(href="static/assets/static/img/trcode.png");
+  width: 300px;
+    height: 300px;
+    border: 1px solid green;
+    float: left;
+    margin: 5px;
+}
+p  {
+    color: black;
+    font-family: Arial;
+    font-size: 12pt;
+    text-align: center;
+    font-weight: lighter;
+}
+p2  {
+    color: black;
+    font-family: Arial;
+    font-size: 20pt;
+    text-align: center;
+    font-weight: bold;
+}
